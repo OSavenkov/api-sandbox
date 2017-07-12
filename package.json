@@ -19,6 +19,7 @@
   "homepage": "https://github.com/OSavenkov/api-sandbox#readme",
   "dependencies": {
     "@types/restify": "^5.0.0",
+    "node-sspi": "^0.1.15",
     "restify": "^5.0.0"
   },
   "devDependencies": {
