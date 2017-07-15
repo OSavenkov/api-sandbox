@@ -25,5 +25,8 @@
     "node-sspi": "^0.1.15",
     "sequelize": "^4.3.2",
     "tedious": "^2.0.0"
+  },
+  "devDependencies": {
+    "sequelize-mock": "^0.8.1"
   }
 }
