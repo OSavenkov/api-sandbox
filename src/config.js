@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
 const SequelizeMock = require('sequelize-mock');
 
 const sequelize = new SequelizeMock();
