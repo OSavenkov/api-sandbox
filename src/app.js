@@ -11,16 +11,16 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-// app.use(function(req, res, next) {
-//     var nodeSSPI = require('node-sspi');
-//     var nodeSSPIObj = new nodeSSPI({
-//         retrieveGroups: true
-//     });
-//     nodeSSPIObj.authenticate(req, res, function(err) {
-//         res.finished || next();
-//     });
-// });
-app.use('/api/search', SearchController);
+// AUTHORIZE
+app.use(function(req, res, next) {
+    var nodeSSPI = require('node-sspi');
+    var nodeSSPIObj = new nodeSSPI({
+        retrieveGroups: true
+    });
+    nodeSSPIObj.authenticate(req, res, function(err) {
+        res.finished || next();
+    });
+});
 // app.use(function(req, res, next) {
 //     var out = 'Hello ' + req.connection.user + '! You belong to following groups:<br/><ul>';
 //     if (req.connection.userGroups) {
@@ -31,5 +31,6 @@ app.use('/api/search', SearchController);
 //     out += '</ul>';
 //     res.send(out);
 // });
+app.use('/api/search', SearchController);
 
 module.exports = app;
