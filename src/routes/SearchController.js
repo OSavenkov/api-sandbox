@@ -6,7 +6,7 @@ var Organizations = require('../model/Organizations.js');
 var CorpUser = require('../model/CorpUser.js');
 
 router.use(bodyParser.urlencoded({ extended: true }));
-router.use(authorize('HQ\\Администраторы Kaspi Red'));
+//router.use(authorize('HQ\\Администраторы Kaspi Red'));
 router.post('/', function(req, res, next) {
 
 });

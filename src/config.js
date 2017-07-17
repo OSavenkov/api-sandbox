@@ -1,4 +1,5 @@
 var config = {
+    mockDb: true,
     expressPort: 3000,
     allowesOrigins: '*',
     db: {

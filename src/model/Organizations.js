@@ -1,18 +1,22 @@
+const config = require('../config.js');
 const Sequelize = require('sequelize');
 var dbContext = require('../dbContext.js');
 
-const Organizations =
-    // config
-    // .sequelize
-    // .define('organizations', {
-    //     Id: 1,
-    //     Idn: '050864020062'
-    //     Name: 'Google',
-    // }, {
-    //     timestamps: false
-    // });
+var Organizations;
 
-    dbContext.sequelize.define('Organizations', {
+if (config.mockDb) {
+    Organizations = dbContext
+        .sequelize
+        .define('Organizations', {
+            Id: 1,
+            Idn: '050864020062',
+            Name: 'Google',
+        }, {
+            timestamps: false
+        });
+}
+else {
+    Organizations = dbContext.sequelize.define('Organizations', {
         Id: {
             primaryKey: true,
             type: Sequelize.BIGINT
@@ -24,8 +28,9 @@ const Organizations =
             type: Sequelize.STRING
         }
     }, {
-        timestamps: false,
-        tableName: 'Organizations'
-    });
+            timestamps: false,
+            tableName: 'Organizations'
+        });
+}
 
 module.exports = Organizations;

@@ -22,8 +22,8 @@
     "babel-preset-es2015": "^6.0.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "node-sspi": "^0.1.15",
     "sequelize": "^4.3.2",
+    "node-sspi": "^0.1.15",
     "tedious": "^2.0.0"
   },
   "devDependencies": {
