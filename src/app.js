@@ -4,7 +4,7 @@ var config = require('./config.js');
 var SearchController = require('./routes/SearchController');
 
 var app = express();
-// "node-sspi": "^0.1.15",
+
 // CORS
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", config.allowesOrigins);
