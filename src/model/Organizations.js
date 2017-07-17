@@ -1,15 +1,31 @@
-var config = require('../config.js');
+const Sequelize = require('sequelize');
+var dbContext = require('../dbContext.js');
 
-const Organizations = config
-    .sequelize
-    .define('organizations', {
-        Id: 1,
-        Name: 'Google'
+const Organizations =
+    // config
+    // .sequelize
+    // .define('organizations', {
+    //     Id: 1,
+    //     Idn: '050864020062'
+    //     Name: 'Google',
+    // }, {
+    //     timestamps: false
+    // });
+
+    dbContext.sequelize.define('Organizations', {
+        Id: {
+            primaryKey: true,
+            type: Sequelize.BIGINT
+        },
+        Idn: {
+            type: Sequelize.STRING
+        },
+        Name: {
+            type: Sequelize.STRING
+        }
     }, {
-        timestamps: false
+        timestamps: false,
+        tableName: 'Organizations'
     });
-
-// config .sequelize .define('organization', {     Name: {         type:
-// Sequelize.STRING     } }, {timestamps: false});
 
 module.exports = Organizations;
