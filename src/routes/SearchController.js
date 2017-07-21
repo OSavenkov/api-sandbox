@@ -7,8 +7,8 @@ var OrganizationsRepository = require('../data/repositories/OrganizationsReposit
 var CorpUser = require('../data/models/CorpUser.js');
 
 router.use(bodyParser.urlencoded({ extended: true }));
-router.use(authorize('\\ЛОКАЛЬНЫЕ'));
-// router.use(authorize('\\Everyone'));
+//router.use(authorize('\\ЛОКАЛЬНЫЕ'));
+router.use(authorize('\\Everyone'));
 router.post('/', function(req, res, next) {
 
 });

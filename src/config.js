@@ -1,7 +1,7 @@
 var config = {
     mockDb: false,
     expressPort: 3000,
-    allowesOrigins: '*',
+    allowesOrigins: 'http://localhost:3001',
     db: {
         host: 'kon-dvl-db',
         database: 'KaspiBusiness_Dev',

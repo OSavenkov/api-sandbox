@@ -4,10 +4,10 @@ module.exports = {
             where: {
                 $or: {
                     Idn: {
-                        $like: criteria + '%'
+                        $like: '%' + criteria + '%'
                     },
                     Name: {
-                        $like: criteria + '%'
+                        $like: '%' + criteria + '%'
                     },
                 }
             }
@@ -18,17 +18,17 @@ module.exports = {
             where: {
                 $or: {
                     Idn: {
-                        $like: criteria + '%'
+                        $like: '%' + criteria + '%'
                     },
                     $or: {
                         LastName: {
-                            $like: criteria + '%'
+                            $like: '%' + criteria + '%'
                         },
                         FirstName: {
-                            $like: criteria + '%'
+                            $like: '%' + criteria + '%'
                         },
                         MiddleName: {
-                            $like: criteria + '%'
+                            $like: '%' + criteria + '%'
                         }
                     }
                 }
